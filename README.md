@@ -36,3 +36,13 @@ Measured accuracy and AUC-ROC for model performance on training and validation s
 
 # Submission
 Generated predictions and saved them in the required submission format for Kaggle.
+
+data/: Contains datasets used for training and testing.
+notebooks/: Jupyter notebooks for EDA, preprocessing, modeling, and evaluation.
+src/: Python scripts for pipeline automation.
+results/: Model predictions and submission files.
+requirements.txt: Dependencies for replicating the project environment.
+
+# Results
+Achieved a mean AUC-ROC of 0.955 using the ensemble stacked model.
+Saved predictions from various models (DecisionTree, RandomForest, SVM, etc.) for comparison.
