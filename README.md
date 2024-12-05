@@ -1,23 +1,38 @@
 # Kaggle-Submission---Homesite-Quote-Conversion
-Homesite-Quote-Conversion/
-├── data/                   # Store any raw or processed datasets
-│   ├── train.csv
-│   ├── test.csv
-├── notebooks/              # Jupyter Notebooks
-│   ├── EDA.ipynb
-│   ├── Model_Building.ipynb
-├── src/                    # Python scripts
-│   ├── data_preprocessing.py
-│   ├── model_training.py
-│   ├── utils.py
-├── results/                # Results, metrics, and submission files
-│   ├── submission.csv
-│   ├── model_metrics.json
-├── images/                 # Graphs or visualizations
-│   ├── correlation_matrix.png
-│   ├── feature_importance.png
-├── README.md               # Project overview
-├── LICENSE                 # License file (if applicable)
-├── requirements.txt        # Dependencies
-├── .gitignore              # Files to ignore
+## Predicting Home Insurance Conversion Rates
+# Overview
+This project is focused on building a machine learning model to predict the likelihood of a customer purchasing a given home insurance quote. The dataset and problem statement were sourced from a Kaggle competition hosted by Homesite Insurance.
 
+# Objective
+The goal is to predict the QuoteConversion_Flag (1 for purchase, 0 otherwise) for given insurance quotes based on customer, property, and quote details. Accurate predictions can help Homesite optimize pricing and target customer segments effectively.
+
+# Evaluation Metric
+Submissions are evaluated using the Area Under the Receiver Operating Characteristic Curve (AUC-ROC), measuring the model's ability to distinguish between classes.
+
+# Key Steps
+1) Exploratory Data Analysis (EDA)
+Investigated class imbalance and feature correlations.
+Visualized target distribution and feature relationships.
+Preprocessing
+
+2)Managed missing values.
+3)Performed one-hot encoding for categorical variables.
+4) Applied SMOTE to handle class imbalance.
+
+# Modeling
+Experimented with various classifiers:
+Decision Tree
+Random Forest
+Support Vector Machines (SVM)
+K-Nearest Neighbors (KNN)
+Multilayer Perceptron (MLP)
+Implemented ensemble stacking with Gradient Boosting as the meta-model.
+
+# Hyperparameter Tuning
+Used RandomizedSearchCV for optimizing model parameters.
+
+# Evaluation
+Measured accuracy and AUC-ROC for model performance on training and validation sets.
+
+# Submission
+Generated predictions and saved them in the required submission format for Kaggle.
