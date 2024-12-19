@@ -1,4 +1,4 @@
-# Kaggle-Submission---Homesite-Quote-Conversion
+# Kaggle - Submission---Homesite-Quote-Conversion
 ## Predicting Home Insurance Conversion Rates
 # Overview
 This project is focused on building a machine learning model to predict the likelihood of a customer purchasing a given home insurance quote. The dataset and problem statement were sourced from a Kaggle competition hosted by Homesite Insurance.
