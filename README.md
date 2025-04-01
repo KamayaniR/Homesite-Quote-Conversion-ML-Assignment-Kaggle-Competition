@@ -1,43 +1,55 @@
 # Homesite Quote Conversion – ML Assignment & Kaggle Competition
 
-## Predicting Home Insurance Conversion Rates
-# Overview
-This project is focused on building a machine learning model to predict the likelihood of a customer purchasing a given home insurance quote. The dataset and problem statement were sourced from a Kaggle competition hosted by Homesite Insurance.
+# Problem Statement
+The goal is to predict whether a customer will purchase an insurance quote, based on historical quote data. The binary target variable QuoteConversion_Flag presents a class imbalance challenge, where ~95% of observations are non-conversions.
 
-# Objective
-The goal is to predict the QuoteConversion_Flag (1 for purchase, 0 otherwise) for given insurance quotes based on customer, property, and quote details. Accurate predictions can help Homesite optimize pricing and target customer segments effectively.
+# This project explores:
+- How to handle imbalanced classification
+- The role of SMOTE (oversampling)
+- Power of Ensemble Learning (Stacking)
+- Best practices in model evaluation
 
-# Evaluation Metric
-Submissions are evaluated using the Area Under the Receiver Operating Characteristic Curve (AUC-ROC), measuring the model's ability to distinguish between classes.
 
-# Key Steps
-1) Exploratory Data Analysis (EDA)
-Investigated class imbalance and feature correlations.
-Visualized target distribution and feature relationships.
-Preprocessing
+# Project Pipeline Overview
+🔹 Step 1: Data Preprocessing
+Loaded raw data using pandas
+Removed ID-related columns
+Handled categorical variables:
+Used Label Encoding initially (for base modeling)
+Considered One-Hot Encoding for final ensemble
+Applied train_test_split to prepare validation set
+Scaled numeric features for models like SVM & MLP
 
-2)Managed missing values.
-3)Performed one-hot encoding for categorical variables.
-4) Applied SMOTE to handle class imbalance.
+🔹 Step 2: Exploratory Data Analysis (EDA)
+Checked null values, feature distribution, and class balance
+Observed:
+65,000 rows × 596 features
+Highly imbalanced target variable
+Visualized correlations (optional heatmaps)
+Confirmed categorical dominance in features
 
-# Modeling
-Experimented with various classifiers:
-Decision Tree
-Random Forest
-Support Vector Machines (SVM)
-K-Nearest Neighbors (KNN)
-Multilayer Perceptron (MLP)
-Implemented ensemble stacking with Gradient Boosting as the meta-model.
+🔹 Step 3: Handling Class Imbalance
+Used SMOTE (Synthetic Minority Oversampling Technique) to create synthetic samples of the minority class:
 
-# Hyperparameter Tuning
-Used RandomizedSearchCV for optimizing model parameters.
+## photo 
+Before: Class 1 = 5%
+After: Class 1 = 50%
+Balanced data allowed models to better generalize to minority predictions.
 
-# Evaluation
-Measured accuracy and AUC-ROC for model performance on training and validation sets.
+🔹 Step 4: Base Models Trained
 
-# Submission
-Generated predictions and saved them in the required submission format for Kaggle.
+🔹 Step 5: Ensemble Learning (Stacking)
+Built a StackingClassifier with multiple base learners:
+Trained on SMOTE-balanced data
+Final predictions evaluated using AUC, accuracy
+Cross-validated over multiple folds
 
-# Results
-Achieved a mean AUC-ROC of 0.955 using the ensemble stacked model.
-Saved predictions from various models (DecisionTree, RandomForest, SVM, etc.) for comparison.
+
+## photo
+🔹 Step 6: Model Evaluation
+Used:
+confusion_matrix for true/false positive rates
+classification_report
+roc_auc_score across folds
+# photos 
+
