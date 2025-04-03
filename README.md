@@ -29,8 +29,9 @@ The goal is to predict whether a customer will purchase an insurance quote, base
 
 🔹 Step 3: Handling Class Imbalance
   -  Used SMOTE (Synthetic Minority Oversampling Technique) to create synthetic samples of the minority class:
+    
+      ![Alt text](images)
 
-## photo 
   -  Before: Class 1 = 5%
   -  After: Class 1 = 50%
 Balanced data allowed models to better generalize to minority predictions.
