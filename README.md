@@ -57,24 +57,24 @@ Balanced data allowed models to better generalize to minority predictions.
    -  roc_auc_score across folds
 # photos 
 # Kaggle Submission & Comparison
-add result
+##add result
 
 # Key Finding:
-While the Stacked Ensemble improved minority class prediction and generalization, Random Forest outperformed it in terms of raw leaderboard score.
+- While the Stacked Ensemble improved minority class prediction and generalization, Random Forest outperformed it in terms of raw leaderboard score.
 
 # Key Learnings
-SMOTE dramatically improved minority class performance.
-Ensemble learning using stacking yielded robust, generalized results.
-Random Forest remains a powerful model for structured data.
-Model evaluation across folds is essential for measuring true performance.
-Tuning meta-models (e.g., GradientBoosting) is crucial in stacking.
+- SMOTE dramatically improved minority class performance.
+- Ensemble learning using stacking yielded robust, generalized results.
+- Random Forest remains a powerful model for structured data.
+- Model evaluation across folds is essential for measuring true performance.
+- Tuning meta-models (e.g., GradientBoosting) is crucial in stacking.
 
 # Future Enhancements
-Use XGBoost or LightGBM as meta learners in stacking.
-Explore Bayesian Optimization instead of RandomizedSearchCV.
-Try Cost-Sensitive Learning to penalize misclassification.
-Integrate SHAP for explainability.
-Move from Jupyter to Python script modules for scalable development.
+- Use XGBoost or LightGBM as meta learners in stacking.
+- Explore Bayesian Optimization instead of RandomizedSearchCV.
+- Try Cost-Sensitive Learning to penalize misclassification.
+- Integrate SHAP for explainability.
+- Move from Jupyter to Python script modules for scalable development.
 
 
 
