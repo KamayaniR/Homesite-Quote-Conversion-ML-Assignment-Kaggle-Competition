@@ -57,7 +57,10 @@ Balanced data allowed models to better generalize to minority predictions.
    -  roc_auc_score across folds
 # photos 
 # Kaggle Submission & Comparison
-##add result
+   Model             Private Leaderboard Score
+   Random Forest     0.857
+   Stacked Ensemble  0.85246
+   MLP / KNN / SVM   < 0.80
 
 # Key Finding:
 - While the Stacked Ensemble improved minority class prediction and generalization, Random Forest outperformed it in terms of raw leaderboard score.
