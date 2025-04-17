@@ -32,7 +32,7 @@ The goal is to predict whether a customer will purchase an insurance quote, base
   ## Step 3: Handling Class Imbalance
     -  Used SMOTE (Synthetic Minority Oversampling Technique) to create synthetic samples of the minority class:
       
-    ![Snippet](images/image2.png)
+  ![Snippet](images/image2.png)
   
     -  Before: Class 1 = 5%
     -  After: Class 1 = 50%
@@ -59,25 +59,25 @@ The goal is to predict whether a customer will purchase an insurance quote, base
    -  roc_auc_score across folds
 
 # Kaggle Submission & Comparison
-   Model             Private Leaderboard Score
-   Random Forest     0.857
-   Stacked Ensemble  0.85246
-   MLP / KNN / SVM   < 0.80
+   ## Model               Private Leaderboard Score
+    - Random Forest       0.857
+    - Stacked Ensemble    0.85246
+    - MLP / KNN / SVM   < 0.80
 
 # Key Finding:
-- While the Stacked Ensemble improved minority class prediction and generalization, Random Forest outperformed it in terms of raw leaderboard score.
+- While the Stacked Ensemble improved minority class prediction and generalisation, Random Forest outperformed it regarding raw leaderboard score.
 
 # Key Learnings
 - SMOTE dramatically improved minority class performance.
-- Ensemble learning using stacking yielded robust, generalized results.
+- Ensemble learning using stacking yielded robust, generalised results.
 - Random Forest remains a powerful model for structured data.
 - Model evaluation across folds is essential for measuring true performance.
 - Tuning meta-models (e.g., GradientBoosting) is crucial in stacking.
 
 # Future Enhancements
-- Use XGBoost or LightGBM as meta learners in stacking.
-- Explore Bayesian Optimization instead of RandomizedSearchCV.
-- Try Cost-Sensitive Learning to penalize misclassification.
+- Use XGBoost or Lightgbm as meta learners in stacking.
+- Explore Bayesian Optimisation instead of RandomizedSearchCV.
+- Try Cost-Sensitive Learning to penalise misclassification.
 - Integrate SHAP for explainability.
 - Move from Jupyter to Python script modules for scalable development.
 
