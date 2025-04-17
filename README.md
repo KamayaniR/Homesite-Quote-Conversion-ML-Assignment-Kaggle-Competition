@@ -32,7 +32,7 @@ The goal is to predict whether a customer will purchase an insurance quote, base
   ## Step 3: Handling Class Imbalance
     -  Used SMOTE (Synthetic Minority Oversampling Technique) to create synthetic samples of the minority class:
       
-        ![Snippet](images/image2.png)
+    ![Snippet](images/image2.png)
   
     -  Before: Class 1 = 5%
     -  After: Class 1 = 50%
@@ -46,14 +46,14 @@ The goal is to predict whether a customer will purchase an insurance quote, base
    -  Trained on SMOTE-balanced data
    -  Final predictions evaluated using AUC, accuracy
    -  Cross-validated over multiple folds
-   -  
+     
   ## Step 6: Model Evaluation
-   # Metric                     Value
+   ## Metric                     Value
     - Stacked Model Accuracy    95.12%
     - Mean AUC (7-Fold CV)      95.59%
     - Best Fold AUC             0.997
 
-      Used:
+   Used:
    -  confusion_matrix for true/false positive rates
    -  classification_report
    -  roc_auc_score across folds
